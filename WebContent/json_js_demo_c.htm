@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON</title>
+<script type="text/javascript">
+	// 假设以下的数据是通过Ajax取得的返回结果
+	jsonData = "{\"姓名\":\"张三\",\"年龄\":10,\"收入\":100.9,"
+			+ "\"兴趣\":[\"唱歌\",\"跳舞\",\"看书\"],"
+			+ "\"拥有图书\":[{\"书名\":\"Java开发 - 0\",\"作者\":\"开发者 - 0\",\"价格\":100},"
+			+ "{\"书名\":\"Java开发 - 1\",\"作者\":\"开发者 - 1\",\"价格\":101},"
+			+ "{\"书名\":\"Java开发 - 2\",\"作者\":\"开发者 - 2\",\"价格\":102}]}";
+	// 如果要想将其解析为JSON对象，那么可以使用eval()函数，必须采用“(json数据)”
+	obj = eval("(" + jsonData + ")") ;
+	console.log(obj.姓名) ;
+	console.log(obj["年龄"]) ;
+	console.log(obj.收入) ;
+	for (x = 0 ; x < obj.兴趣.length ; x ++) {
+		console.log(obj.兴趣[x]) ;
+	}
+	for (x = 0 ; x < obj.拥有图书.length ; x ++) {
+		console.log(obj.拥有图书[x].书名) ;
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

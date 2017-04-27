@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON</title>
+<script type="text/javascript" src="js/json.js"></script>
+<script type="text/javascript">
+	num = 10 ;
+	str = "{\"mycount\": \"num\"}" ;	// 里面有代码
+	try {
+		obj = JSON.parse(str) ; 	// 利用json.js中提供的函数解析
+		console.log(obj.mycount) ;
+	} catch(e) {
+		console.log("错误的JSON数据") ;
+	}
+</script> 
+</head>
+<body>
+
+</body>
+</html>
